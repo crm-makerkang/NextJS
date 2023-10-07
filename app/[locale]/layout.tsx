@@ -19,21 +19,21 @@ export const metadata: Metadata = {
   description: '',
 }
 
-export default async function LocaleLayout({ children, params: { locale } }) {
+export default async function LocaleLayout(props:any) {
   //console.log(locale);
   let messages;
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = (await import(`../../messages/${props.params.locale}.json`)).default;
   } catch (error) {
     notFound();
   }
 
   return (
-    <html lang={locale}>
+    <html lang={props.params.locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={props.params.locale} messages={messages}>
           <Header forTest />
-          {children}
+          {props.children}
         </NextIntlClientProvider>
       </body>
     </html>

@@ -44,7 +44,7 @@ export default function Header(test: any) {
             </Link>
           </div>
 
-          <nav className="mx-6 flex items-center space-x-4 lg:space-x-6 hidden md:block">
+          {/* <nav className="mx-6 flex items-center space-x-4 lg:space-x-6 hidden md:block">
             {nav_routes.map((route, i) => (
               <Button asChild variant={"ghost"}  >
                 <Link key={i} href={route.href} id={route.href}
@@ -56,7 +56,7 @@ export default function Header(test: any) {
             ))
 
             }
-          </nav>
+          </nav> */}
 
           <div className="flex items-center">
             <LanguageButton />

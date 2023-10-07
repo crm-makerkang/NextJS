@@ -22,9 +22,9 @@ function LanguageButton() {
 
   const router = useRouter();
 
-  useEffect(() => {
-    setlanguage(router.locale)
-  }, [language])
+  // useEffect(() => {
+  //   setlanguage(router.locale)
+  // }, [language])
 
 
   const dispalyLamguage = (language: string) => {
