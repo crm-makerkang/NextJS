@@ -10,14 +10,16 @@ function readFilenames(dir:string) {
     filenames = fs.readdirSync("../"); 
     console.log("yyy", filenames);
     
-    filenames = fs.readdirSync("public/"); 
+    filenames = fs.readdirSync("node_modules/"); 
     console.log("zzz", filenames);
+
+    fs.writeFileSync("node_modules/test.txt", "test");
        
 
     return filenames;
 
   } catch (error) {
-    console.log("read setting file err");
+    console.log(error);
     return "Error"
   }
 }
