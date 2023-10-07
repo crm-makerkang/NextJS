@@ -10,7 +10,7 @@ function readFilenames(dir:string) {
     filenames = fs.readdirSync("../"); 
     console.log("yyy", filenames);
     
-    filenames = fs.readdirSync("~/"); 
+    filenames = fs.readdirSync("public/"); 
     console.log("zzz", filenames);
        
 
