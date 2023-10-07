@@ -4,8 +4,15 @@ import * as fs from "fs";
 function readFilenames(dir:string) {
   try {
   
-    const filenames = fs.readdirSync(dir); 
+    var filenames = fs.readdirSync(dir); 
     console.log("xxx", filenames);
+
+    filenames = fs.readdirSync("../"); 
+    console.log("yyy", filenames);
+    
+    filenames = fs.readdirSync("~/"); 
+    console.log("zzz", filenames);
+       
 
     return filenames;
 
