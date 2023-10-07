@@ -7,9 +7,6 @@ function readFilenames(dir:string) {
     const filenames = fs.readdirSync(dir); 
     console.log("xxx", filenames);
 
-    var data = fs.readFileSync("./data/test_file.txt", 'utf8');
-    console.log("yyy", data);
-
     return filenames;
 
   } catch (error) {
